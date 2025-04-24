@@ -25,6 +25,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |EditAR: Unified Conditional Generation with Autoregressive Models | [2025](https://arxiv.org/pdf/2501.04699) |[EditAR](https://jitengmu.github.io/EditAR/) | 提出 EditAR，一个用于各种条件图像生成任务的统一条件自回归模型 (图像编辑、深度图到图像、边缘图到图像、分割图到图像)。|PIE-Bench, (也提到了基线模型 InstructPix2Pix, MagicBrush, 暗示使用了这些模型所用的数据集如 COCO, ImageNet, LAION 等)|
 |Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation|[2025](https://arxiv.org/pdf/2504.02612)|[link](https://github.com/jiwoogit/ARBooth) | 专注于调整视觉自回归 (VAR) 模型用于主体驱动的图像生成，即根据少量示例和文本提示生成特定主体的图像。| |
 |SWITTI: Designing Scale-Wise Transformers for Text-to-Image Synthesis|[CVPR-2025](https://arxiv.org/pdf/2412.01819)| [SWITTI](https://arxiv.org/pdf/2412.01819) | 提出 SWITTI，一个用于 text-to-image 生成的 scale-wise transformer。调整现有的 next-scale prediction AR 架构，解决训练稳定性并提高采样效率。|MS-COCO (validation captions), (也提到了人体偏好研究和自动化评估，与现有 T2I AR 和扩散模型比较，暗示使用了标准 T2I 基准数据集)|
+|MultiDiff: Consistent Novel View Synthesis from a Single Image | [CVPR-2024](https://arxiv.org/pdf/2406.18524) | [MultiDiff](https://sirwyver.github.io/MultiDiff/) |引入 MultiDiff，通过结合单目深度预测器和视频扩散先验，从单张 RGB 图像合成一致的新视角。|RealEstate10K, ScanNet|
 
 ##  Autoregressive model efficiency and component improvements
 > These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
@@ -38,6 +39,8 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Numerical Pruning for Efficient Autoregressive Models| [AAAI-2025](https://arxiv.org/pdf/2412.12441) | | 通过结构化权重剪枝压缩 decoder-only transformer-based 自回归模型，提高语言和图像生成任务的效率。| |
 |Stabilize the Latent Space for Image Autoregressive Modeling: A Unified Perspective | [NeurIPS-2024](https://arxiv.org/pdf/2410.12490) | [DiGIT](https://github.com/DAMO-NLP-SG/DiGIT) | 研究自回归模型在图像生成方面落后于 latent diffusion models 和 masked image models 的原因。提出统一的视角分析 latent space 与生成模型的关系。（摘要未详细说明具体的稳定方法）| |
 |Scalable Autoregressive Image Generation with Mamba | [2025](https://arxiv.org/pdf/2408.12245) | [AiM](https://github.com/hp-l33/AiM) | 引入 AiM，一个基于 Mamba 架构的自回归图像生成模型。使用 Mamba 代替 Transformer，旨在提高生成质量和推理速度。直接使用 next-token prediction 范式。| ImageNet |
+| Parallelized Autoregressive Visual Generation| [CVPR-2025](https://arxiv.org/pdf/2412.15119) | [PAR](https://yuqingwang1029.github.io/PAR-project/) |提出一种并行化自回归视觉生成方法，利用视觉 token 之间的弱依赖性，并行生成远距离 token，同时顺序生成强依赖的局部 token。|ImageNet, UCF-101|
+|LANTERN: Accelerating Visual Autoregressive Models with Relaxed Speculative Decoding| [ICLR-2025](https://arxiv.org/pdf/2410.03355) | [LANTERN](https://github.com/jadohu/LANTERN)|提出 LANTERN，一种用于加速视觉自回归模型推断的宽松推测解码接受条件，利用潜在空间中 token 的可互换性。|MS-COCO (validation captions)|
 
 ## Unified and Multimodal Autoregressive Models
 > These papers explore applying autoregressive models to unified vision and language tasks, or to handle multimodal data.
@@ -49,6 +52,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |UGen: Unified Autoregressive Multimodal Model with Progressive Vocabulary Learning| [2025](https://arxiv.org/pdf/2503.21193) | | 提出 UGen，一个统一的自回归多模态模型，用于同时进行文本处理、图像理解和图像生成。将文本和图像转换为离散 token 序列，使用单个 transformer 自回归生成。采用渐进式词汇学习机制。| |
 |Unified Autoregressive Visual Generation and Understanding with Continuous Tokens | [2025](https://arxiv.org/pdf/2503.13436) | | 提出 UniFluid，一个使用连续视觉 token 进行联合视觉生成和理解的统一自回归框架。处理多模态图像和文本输入，生成离散文本 token 和连续图像 token。| |
 |VARGPT-v1.1: Improve Visual Autoregressive Large Unified Model via Iterative Instruction Tuning and Reinforcement Learning | [2025](https://arxiv.org/pdf/2504.02949) | [VARGPT-v1.1](https://github.com/VARGPT-family/VARGPT-v1.1) |提出 VARGPT-v1.1，一个改进的统一视觉自回归模型。保留 next-token prediction for visual understanding 和 next-scale generation for image synthesis 的双重范式。整合迭代视觉指令微调和强化学习 (DPO)。| |
+|TIGeR: Unifying Text-to-Image Generation and Retrieval with Large Multimodal Models | [ICLR-2025](https://arxiv.org/pdf/2406.05814) | [TIGeR](https://tiger-t2i.github.io/) | 提出 TIGeR，一个使用单一大型多模态模型 (LMM) 统一 text-to-image 生成和检索的框架。探索 LMM 的判别能力实现无需训练的生成式检索，并提出自主决策机制选择生成或检索。| TIGeR-Bench (knowledge domain)|
 
 ## Application of autoregressive models in other fields
 > This type of paper applies autoregressive models to areas other than image generation, such as 3D shape generation, video generation, information hiding, etc.
@@ -72,7 +76,5 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Safe-VAR: Safe Visual Autoregressive Model for Text-to-Image Generative Watermarking | [2025](https://arxiv.org/pdf/2503.11324) | | 提出 Safe-VAR，第一个专为视觉自回归 (VAR) text-to-image 生成模型设计的数字水印框架。研究水印注入时机的影响，提出 Adaptive Scale Interaction Module 动态确定水印嵌入策略。| |
 
 
-MultiDiff
-Parallelized Autoregressive Visual Generation
-LANTERN
-TIGeR
+
+
