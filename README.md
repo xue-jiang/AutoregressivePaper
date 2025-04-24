@@ -29,4 +29,5 @@ These papers focus on increasing the speed of generating autoregressive models, 
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |E-CAR: Efficient Continuous Autoregressive Image Generation via Multistage Modeling| [2024](https://arxiv.org/pdf/2412.14170) |  |提出 E-CAR，通过多阶段建模实现高效连续自回归图像生成。采用阶段式连续 token 生成策略和多阶段 flow-based 分布建模方法。||
+|FastVAR: Linear Visual Autoregressive Modeling via Cached Token Pruning | [2025](https://arxiv.org/pdf/2503.23367) | [FastVAR](https://github.com/csguoh/FastVAR) | 提出 FastVAR，一种用于加速视觉自回归 (VAR) 模型分辨率缩放的后训练方法。开发缓存 token 剪枝策略，仅转发关键 token，使用之前尺度的缓存 token 恢复剪枝位置。 | ImageNet, (也提到了 zero-shot generation，暗示使用了用于预训练的数据集如 COCO, LAION 等)|
 
