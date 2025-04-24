@@ -51,3 +51,4 @@ This type of paper applies autoregressive models to areas other than image gener
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Autoregressive Video Generation without Vector Quantization| [ICLR-2025](https://arxiv.org/pdf/2412.14169) | [NOVA](https://github.com/baaivision/NOVA) | 提出 NOVA，一种用于高效灵活的无矢量量化自回归视频生成方法。将视频生成重新定义为时间上的逐帧和空间上的逐集合预测的无量化自回归建模。| |
+|Make Autoregressive Great Again: Diffusion-Free Graph Generation with Next-Scale Prediction| [2025](https://arxiv.org/pdf/2503.23612) | | generic graph datasets, molecular graph datasets (摘要未明确提及具体数据集名称)|
