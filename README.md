@@ -34,4 +34,3 @@ These papers focus on increasing the speed of generating autoregressive models, 
 |LazyMAR: Accelerating Masked Autoregressive Models via Feature Caching | [2025](https://arxiv.org/pdf/2503.12450) | [LazyMAR](https://github.com/feihongyan1/LazyMAR) |旨在加速 Masked Autoregressive (MAR) 模型。通过利用 Token Redundancy (相邻解码步中的相似 token 表示) 和 Condition Redundancy (classifier-free guidance 中的条件和无条件输出的相似差异) 来研究缓存机制。| |
 |Numerical Pruning for Efficient Autoregressive Models| [AAAI-2025](https://arxiv.org/pdf/2412.12441) | | 通过结构化权重剪枝压缩 decoder-only transformer-based 自回归模型，提高语言和图像生成任务的效率。| |
 |Stabilize the Latent Space for Image Autoregressive Modeling: A Unified Perspective | [NIPS-2024](https://arxiv.org/pdf/2410.12490) | [DiGIT](https://github.com/DAMO-NLP-SG/DiGIT) | 研究自回归模型在图像生成方面落后于 latent diffusion models 和 masked image models 的原因。提出统一的视角分析 latent space 与生成模型的关系。（摘要未详细说明具体的稳定方法）| |
-
