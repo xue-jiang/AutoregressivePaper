@@ -62,7 +62,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Scenario Dreamer: Vectorized Latent Diffusion for Generating Driving Simulation Environments| [CVPR-2025](https://arxiv.org/pdf/2503.22496) | [Scenario Dreamer](https://princeton-computational-imaging.github.io/scenario-dreamer/) | 引入 Scenario Dreamer，一个数据驱动的自动驾驶规划生成模拟器，生成初始交通场景和逼真智能体行为。使用矢量化潜在扩散模型生成初始场景，自回归 Transformer 模拟智能体行为。支持通过扩散 inpainting 进行场景外推。| |
 |Topic-VQ-VAE: Leveraging Latent Codebooks for Flexible Topic-Guided Document Generation | [AAAI-2024](https://arxiv.org/pdf/2312.11532) | [Topic-VQ-VAE](https://github.com/clovaai/TVQ-VAE) | 提出 Topic-VQ-VAE (TVQ-VAE)，一个利用 VQ-VAE 潜在 codebooks 的生成式主题模型，用于灵活的主题引导文档生成。将潜在 codebooks 和嵌入解释为概念上的词袋。| |
 |VIewDiff: 3D-Consistent Image Generation with Text-to-Image Models | [CVPR-2024](https://arxiv.org/pdf/2403.01807) | [ViewDiff](https://lukashoel.github.io/ViewDiff/) | 提出 ViewDiff，一种使用预训练 text-to-image 扩散模型进行 3D 一致图像生成的方法。将 3D 体积渲染和跨帧注意力层集成到 U-Net 中。设计自回归生成方案。| ScanNet, RealEstate10K, (也提到了使用预训练 text-to-image 扩散模型作为先验，暗示使用了训练这些模型的数据集如 LAION, COCO 等)|
-|Diffusion Beats Autoregressive: An Evaluation of Compositional Generation in Text-to-Image Models| | [NeurIPS-2024](https://arxiv.org/pdf/2410.22775) | 评估和比较扩散模型 (FLUX, Stable Diffusion) 和自回归 (AR) 模型 (LlamaGen) 在 text-to-image 合成中的组合生成能力，专注于准确渲染复杂的组合。| |
+|Diffusion Beats Autoregressive: An Evaluation of Compositional Generation in Text-to-Image Models| [NeurIPS-2024](https://arxiv.org/pdf/2410.22775) | | 评估和比较扩散模型 (FLUX, Stable Diffusion) 和自回归 (AR) 模型 (LlamaGen) 在 text-to-image 合成中的组合生成能力，专注于准确渲染复杂的组合。| |
 
 ## Others
 | title | paper | link | tips | dataset |
