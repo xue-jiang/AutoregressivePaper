@@ -34,6 +34,19 @@ These papers focus on increasing the speed of generating autoregressive models, 
 |LazyMAR: Accelerating Masked Autoregressive Models via Feature Caching | [2025](https://arxiv.org/pdf/2503.12450) | [LazyMAR](https://github.com/feihongyan1/LazyMAR) |旨在加速 Masked Autoregressive (MAR) 模型。通过利用 Token Redundancy (相邻解码步中的相似 token 表示) 和 Condition Redundancy (classifier-free guidance 中的条件和无条件输出的相似差异) 来研究缓存机制。| |
 |Numerical Pruning for Efficient Autoregressive Models| [AAAI-2025](https://arxiv.org/pdf/2412.12441) | | 通过结构化权重剪枝压缩 decoder-only transformer-based 自回归模型，提高语言和图像生成任务的效率。| |
 |Stabilize the Latent Space for Image Autoregressive Modeling: A Unified Perspective | [NIPS-2024](https://arxiv.org/pdf/2410.12490) | [DiGIT](https://github.com/DAMO-NLP-SG/DiGIT) | 研究自回归模型在图像生成方面落后于 latent diffusion models 和 masked image models 的原因。提出统一的视角分析 latent space 与生成模型的关系。（摘要未详细说明具体的稳定方法）| |
-|Scalable Autoregressive Image Generation with Mamba | 2025 | AiM | 引入 AiM，一个基于 Mamba 架构的自回归图像生成模型。使用 Mamba 代替 Transformer，旨在提高生成质量和推理速度。直接使用 next-token prediction 范式。| ImageNet |
+|Scalable Autoregressive Image Generation with Mamba | [2025](https://arxiv.org/pdf/2408.12245) | [AiM](https://github.com/hp-l33/AiM) | 引入 AiM，一个基于 Mamba 架构的自回归图像生成模型。使用 Mamba 代替 Transformer，旨在提高生成质量和推理速度。直接使用 next-token prediction 范式。| ImageNet |
 
+## Unified and Multimodal Autoregressive Models
+These papers explore applying autoregressive models to unified vision and language tasks, or to handle multimodal data.
+| title | paper | link | tips | dataset |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens| [CVPR-2025](https://arxiv.org/pdf/2504.14666) | [DDT-LLAMA](https://ddt-llama.github.io/) | 通过利用扩散时间步学习离散的、递归的视觉 token 来统一视觉理解和生成。提出的 token 递归地补偿噪声图像中属性的逐步损失。引入 DDT-LLaMA 模型。| ImageNet (用于 tokenizer 训练), Laion, InternVID (用于基线 tokenizer 训练), (也提及使用了约 200M 过滤后的开放领域图像数据集用于预训练，并计划扩展到 500M 数据集)|
+|JanusFlow: Harmonizing Autoregression and Rectified Flow for Unified Multimodal Understanding and Generation| [CVPR-2025](https://arxiv.org/pdf/2411.07975) | [Janus](https://github.com/deepseek-ai/Janus) | 提出 JanusFlow 框架，将图像理解和生成统一在一个模型中。将自回归语言模型与 rectified flow 集成。解耦理解和生成编码器并在统一训练期间对齐它们的表示。| |
+|UGen: Unified Autoregressive Multimodal Model with Progressive Vocabulary Learning| [2025](https://arxiv.org/pdf/2503.21193) | | 提出 UGen，一个统一的自回归多模态模型，用于同时进行文本处理、图像理解和图像生成。将文本和图像转换为离散 token 序列，使用单个 transformer 自回归生成。采用渐进式词汇学习机制。| |
+|Unified Autoregressive Visual Generation and Understanding with Continuous Tokens | [2025](https://arxiv.org/pdf/2503.13436) | | 提出 UniFluid，一个使用连续视觉 token 进行联合视觉生成和理解的统一自回归框架。处理多模态图像和文本输入，生成离散文本 token 和连续图像 token。| |
+|VARGPT-v1.1: Improve Visual Autoregressive Large Unified Model via Iterative Instruction Tuning and Reinforcement Learning | [2025](https://arxiv.org/pdf/2504.02949) | [VARGPT-v1.1](https://github.com/VARGPT-family/VARGPT-v1.1) |提出 VARGPT-v1.1，一个改进的统一视觉自回归模型。保留 next-token prediction for visual understanding 和 next-scale generation for image synthesis 的双重范式。整合迭代视觉指令微调和强化学习 (DPO)。| |
 
+## Application of autoregressive models in other fields
+This type of paper applies autoregressive models to areas other than image generation, such as 3D shape generation, video generation, information hiding, etc.
+| title | paper | link | tips | dataset |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
