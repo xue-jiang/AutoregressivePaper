@@ -23,3 +23,7 @@ This type of paper applies autoregressive models to solve specific visual proble
 |EditAR: Unified Conditional Generation with Autoregressive Models | [2025](https://arxiv.org/pdf/2501.04699) |[EditAR](https://jitengmu.github.io/EditAR/) | 提出 EditAR，一个用于各种条件图像生成任务的统一条件自回归模型 (图像编辑、深度图到图像、边缘图到图像、分割图到图像)。|PIE-Bench, (也提到了基线模型 InstructPix2Pix, MagicBrush, 暗示使用了这些模型所用的数据集如 COCO, ImageNet, LAION 等)|
 |Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation|[2025](https://arxiv.org/pdf/2504.02612)|[link](https://github.com/jiwoogit/ARBooth) | 专注于调整视觉自回归 (VAR) 模型用于主体驱动的图像生成，即根据少量示例和文本提示生成特定主体的图像。| |
 |SWITTI: Designing Scale-Wise Transformers for Text-to-Image Synthesis|[CVPR-2025](https://arxiv.org/pdf/2412.01819)| [SWITTI](https://arxiv.org/pdf/2412.01819) | 提出 SWITTI，一个用于 text-to-image 生成的 scale-wise transformer。调整现有的 next-scale prediction AR 架构，解决训练稳定性并提高采样效率。|MS-COCO (validation captions), (也提到了人体偏好研究和自动化评估，与现有 T2I AR 和扩散模型比较，暗示使用了标准 T2I 基准数据集)|
+
+##  Autoregressive model efficiency and component improvements
+These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
+
