@@ -14,7 +14,8 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction| [2024](https://arxiv.org/pdf/2404.02905) | [VAR](https://arxiv.org/pdf/2404.02905) | 提出 Visual Autoregressive modeling (VAR)，将图像上的自回归学习重新定义为 coarse-to-fine 的“下一尺度预测”。 | ImageNet, (也提到了 zero-shot 图像编辑结果，暗示使用了用于预训练和编辑能力评估的数据集，如 COCO, LAION)|
 
 ## Specific visual tasks based on autoregressive models
-This type of paper applies autoregressive models to solve specific visual problems beyond image generation, such as image editing, conditional generation, style transfer, etc.
+> This type of paper applies autoregressive models to solve specific visual problems beyond image generation, such as image editing, conditional generation, style transfer, etc.
+
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |A Training-Free Style-aligned Image Generation with Scale-wise Autoregressive Model | [2025](https://arxiv.org/pdf/2504.06144) | |提出一种无需训练的风格对齐图像生成方法，利用 scale-wise 自回归模型。包括初始特征替换、关键特征插值和动态风格注入。| |
@@ -26,7 +27,8 @@ This type of paper applies autoregressive models to solve specific visual proble
 |SWITTI: Designing Scale-Wise Transformers for Text-to-Image Synthesis|[CVPR-2025](https://arxiv.org/pdf/2412.01819)| [SWITTI](https://arxiv.org/pdf/2412.01819) | 提出 SWITTI，一个用于 text-to-image 生成的 scale-wise transformer。调整现有的 next-scale prediction AR 架构，解决训练稳定性并提高采样效率。|MS-COCO (validation captions), (也提到了人体偏好研究和自动化评估，与现有 T2I AR 和扩散模型比较，暗示使用了标准 T2I 基准数据集)|
 
 ##  Autoregressive model efficiency and component improvements
-These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
+> These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
+
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |E-CAR: Efficient Continuous Autoregressive Image Generation via Multistage Modeling| [2024](https://arxiv.org/pdf/2412.14170) |  |提出 E-CAR，通过多阶段建模实现高效连续自回归图像生成。采用阶段式连续 token 生成策略和多阶段 flow-based 分布建模方法。||
@@ -38,7 +40,8 @@ These papers focus on increasing the speed of generating autoregressive models, 
 |Scalable Autoregressive Image Generation with Mamba | [2025](https://arxiv.org/pdf/2408.12245) | [AiM](https://github.com/hp-l33/AiM) | 引入 AiM，一个基于 Mamba 架构的自回归图像生成模型。使用 Mamba 代替 Transformer，旨在提高生成质量和推理速度。直接使用 next-token prediction 范式。| ImageNet |
 
 ## Unified and Multimodal Autoregressive Models
-These papers explore applying autoregressive models to unified vision and language tasks, or to handle multimodal data.
+> These papers explore applying autoregressive models to unified vision and language tasks, or to handle multimodal data.
+
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens| [CVPR-2025](https://arxiv.org/pdf/2504.14666) | [DDT-LLAMA](https://ddt-llama.github.io/) | 通过利用扩散时间步学习离散的、递归的视觉 token 来统一视觉理解和生成。提出的 token 递归地补偿噪声图像中属性的逐步损失。引入 DDT-LLaMA 模型。| ImageNet (用于 tokenizer 训练), Laion, InternVID (用于基线 tokenizer 训练), (也提及使用了约 200M 过滤后的开放领域图像数据集用于预训练，并计划扩展到 500M 数据集)|
@@ -48,7 +51,8 @@ These papers explore applying autoregressive models to unified vision and langua
 |VARGPT-v1.1: Improve Visual Autoregressive Large Unified Model via Iterative Instruction Tuning and Reinforcement Learning | [2025](https://arxiv.org/pdf/2504.02949) | [VARGPT-v1.1](https://github.com/VARGPT-family/VARGPT-v1.1) |提出 VARGPT-v1.1，一个改进的统一视觉自回归模型。保留 next-token prediction for visual understanding 和 next-scale generation for image synthesis 的双重范式。整合迭代视觉指令微调和强化学习 (DPO)。| |
 
 ## Application of autoregressive models in other fields
-This type of paper applies autoregressive models to areas other than image generation, such as 3D shape generation, video generation, information hiding, etc.
+> This type of paper applies autoregressive models to areas other than image generation, such as 3D shape generation, video generation, information hiding, etc.
+
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Autoregressive Video Generation without Vector Quantization| [ICLR-2025](https://arxiv.org/pdf/2412.14169) | [NOVA](https://github.com/baaivision/NOVA) | 提出 NOVA，一种用于高效灵活的无矢量量化自回归视频生成方法。将视频生成重新定义为时间上的逐帧和空间上的逐集合预测的无量化自回归建模。| |
