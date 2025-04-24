@@ -2,7 +2,8 @@
 ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 
 ## Autoregressive Image Generation Method
-> This type of paper focuses on improving the basic methods, architectures, and training strategies of autoregressive models for image generation. <
+> This type of paper focuses on improving the basic methods, architectures, and training strategies of autoregressive models for image generation.
+
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Autoregressive Image Generation without Vector Quantization|[NeurIPS-2024](https://arxiv.org/pdf/2406.11838) | [link](https://github.com/LTH14/mar) |提出使用扩散过程在连续值空间中建模每个 token 的概率分布，定义 Diffusion Loss 函数，消除对离散 tokenizer 的需求。| ImageNet |
