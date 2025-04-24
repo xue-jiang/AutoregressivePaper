@@ -26,4 +26,7 @@ This type of paper applies autoregressive models to solve specific visual proble
 
 ##  Autoregressive model efficiency and component improvements
 These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
+| title | paper | link | tips | dataset |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|E-CAR: Efficient Continuous Autoregressive Image Generation via Multistage Modeling| [2024](https://arxiv.org/pdf/2412.14170) |  |提出 E-CAR，通过多阶段建模实现高效连续自回归图像生成。采用阶段式连续 token 生成策略和多阶段 flow-based 分布建模方法。||
 
