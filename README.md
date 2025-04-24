@@ -2,6 +2,7 @@
 ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 
 ## Autoregressive Image Generation Method
+This type of paper focuses on improving the basic methods, architectures, and training strategies of autoregressive models for image generation.
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Autoregressive Image Generation without Vector Quantization|[NIPS-2024](https://arxiv.org/pdf/2406.11838) | [link](https://github.com/LTH14/mar) |提出使用扩散过程在连续值空间中建模每个 token 的概率分布，定义 Diffusion Loss 函数，消除对离散 tokenizer 的需求。| ImageNet |
@@ -12,6 +13,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction| [2024](https://arxiv.org/pdf/2404.02905) | [VAR](https://arxiv.org/pdf/2404.02905) | 提出 Visual Autoregressive modeling (VAR)，将图像上的自回归学习重新定义为 coarse-to-fine 的“下一尺度预测”。 | ImageNet, (也提到了 zero-shot 图像编辑结果，暗示使用了用于预训练和编辑能力评估的数据集，如 COCO, LAION)|
 
 ## Specific visual tasks based on autoregressive models
+This type of paper applies autoregressive models to solve specific visual problems beyond image generation, such as image editing, conditional generation, style transfer, etc.
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |A Training-Free Style-aligned Image Generation with Scale-wise Autoregressive Model | [2025](https://arxiv.org/pdf/2504.06144) | |提出一种无需训练的风格对齐图像生成方法，利用 scale-wise 自回归模型。包括初始特征替换、关键特征插值和动态风格注入。| |
@@ -22,3 +24,13 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation|[2025](https://arxiv.org/pdf/2504.02612)|[link](https://github.com/jiwoogit/ARBooth) | 专注于调整视觉自回归 (VAR) 模型用于主体驱动的图像生成，即根据少量示例和文本提示生成特定主体的图像。| |
 |SWITTI: Designing Scale-Wise Transformers for Text-to-Image Synthesis|[CVPR-2025](https://arxiv.org/pdf/2412.01819)| [SWITTI](https://arxiv.org/pdf/2412.01819) | 提出 SWITTI，一个用于 text-to-image 生成的 scale-wise transformer。调整现有的 next-scale prediction AR 架构，解决训练稳定性并提高采样效率。|MS-COCO (validation captions), (也提到了人体偏好研究和自动化评估，与现有 T2I AR 和扩散模型比较，暗示使用了标准 T2I 基准数据集)|
 
+##  Autoregressive model efficiency and component improvements
+These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
+| title | paper | link | tips | dataset |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|E-CAR: Efficient Continuous Autoregressive Image Generation via Multistage Modeling| [2024](https://arxiv.org/pdf/2412.14170) |  |提出 E-CAR，通过多阶段建模实现高效连续自回归图像生成。采用阶段式连续 token 生成策略和多阶段 flow-based 分布建模方法。||
+|FastVAR: Linear Visual Autoregressive Modeling via Cached Token Pruning | [2025](https://arxiv.org/pdf/2503.23367) | [FastVAR](https://github.com/csguoh/FastVAR) | 提出 FastVAR，一种用于加速视觉自回归 (VAR) 模型分辨率缩放的后训练方法。开发缓存 token 剪枝策略，仅转发关键 token，使用之前尺度的缓存 token 恢复剪枝位置。 | ImageNet, (也提到了 zero-shot generation，暗示使用了用于预训练的数据集如 COCO, LAION 等)|
+|Head-Aware KV Cache Compression for Efficient Visual Autoregressive Modeling|[2025](https://arxiv.org/pdf/2504.09261) | |提出 Head-Aware KV Cache Compression (HACK)，通过根据注意力头的不同行为和重要性，剪枝 KV cache 中不重要的 token 来提高 VAR 模型效率。|Infinity-2B, (也提到了 VAR-d30 模型，可能在大规模数据集如 ImageNet, OpenImages 等上训练)|
+|LazyMAR: Accelerating Masked Autoregressive Models via Feature Caching | [2025](https://arxiv.org/pdf/2503.12450) | [LazyMAR](https://github.com/feihongyan1/LazyMAR) |旨在加速 Masked Autoregressive (MAR) 模型。通过利用 Token Redundancy (相邻解码步中的相似 token 表示) 和 Condition Redundancy (classifier-free guidance 中的条件和无条件输出的相似差异) 来研究缓存机制。| |
+|Numerical Pruning for Efficient Autoregressive Models| [AAAI-2025](https://arxiv.org/pdf/2412.12441) | | 通过结构化权重剪枝压缩 decoder-only transformer-based 自回归模型，提高语言和图像生成任务的效率。| |
+|Stabilize the Latent Space for Image Autoregressive Modeling: A Unified Perspective | [NIPS-2024](https://arxiv.org/pdf/2410.12490) | [DiGIT](https://github.com/DAMO-NLP-SG/DiGIT) | 研究自回归模型在图像生成方面落后于 latent diffusion models 和 masked image models 的原因。提出统一的视角分析 latent space 与生成模型的关系。（摘要未详细说明具体的稳定方法）| |
