@@ -7,22 +7,8 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Autoregressive Image Generation without Vector Quantization|[NeurIPS-2024](https://arxiv.org/pdf/2406.11838) | [MAR](https://github.com/LTH14/mar) |提出使用扩散过程在连续值空间中建模每个 token 的概率分布，定义 Diffusion Loss 函数，消除对离散 tokenizer 的需求。| ImageNet |
-|Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction| [2024](https://arxiv.org/pdf/2404.02905) | [VAR](https://github.com/FoundationVision/VAR) | 提出 Visual Autoregressive modeling (VAR)，将图像上的自回归学习重新定义为 coarse-to-fine 的“下一尺度预测”。 | ImageNet, (也提到了 zero-shot 图像编辑结果，暗示使用了用于预训练和编辑能力评估的数据集，如 COCO, LAION)|
+|Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction| [NeurIPS-2024](https://arxiv.org/pdf/2404.02905) | [VAR](https://github.com/FoundationVision/VAR) | 提出 Visual Autoregressive modeling (VAR)，将图像上的自回归学习重新定义为 coarse-to-fine 的“下一尺度预测”。 | ImageNet, (也提到了 zero-shot 图像编辑结果，暗示使用了用于预训练和编辑能力评估的数据集，如 COCO, LAION)|
 |FAR: Frequency Autoregressive Image Generation with Continuous Tokens | [2025](https://arxiv.org/pdf/2503.05305) | [FAR](https://yuhuustc.github.io//projects/FAR.html) | 提出 Frequency Autoregressive (FAR) 范式，使用连续 token 进行图像生成。定义频谱依赖作为回归方向，高频分量基于低频分量构建图像。探索 FAR 与连续 tokenizer 的集成。| |
-
-## Specific visual tasks based on autoregressive models
-> This type of paper applies autoregressive models to solve specific visual problems beyond image generation, such as image editing, conditional generation, style transfer, etc.
-
-| title | paper | link | tips | dataset |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-|A Training-Free Style-aligned Image Generation with Scale-wise Autoregressive Model | [2025](https://arxiv.org/pdf/2504.06144) | |提出一种无需训练的风格对齐图像生成方法，利用 scale-wise 自回归模型。包括初始特征替换、关键特征插值和动态风格注入。| |
-|Anchor Token Matching: Implicit Structure Locking for Training-free AR Image Editing| [2025](https://arxiv.org/pdf/2504.10434) | [ATM](https://github.com/hutaiHang/ATM) | 提出隐式结构锁定 (ISLock)，一种无需训练的自回归 (AR) 图像编辑方法。使用“锚点 token 匹配”来隐式锁定结构，在注意力图过程中确保对齐。| PIE-Bench, (也集成了 LlamaGen 和 Lumina-mGPT，暗示使用了这些模型所用的数据集如 LAION, COCO 等)|
-|Autoregressive Omni-Aware Outpainting for Open-Vocabulary 360-Degree Image Generation| [AAAI-2024](https://arxiv.org/pdf/2309.03467) | [AOG-NET-360](https://github.com/zhuqiangLu/AOG-NET-360) | 提出自回归全景感知外绘 (AOGNet) 模型，用于从窄视场 (NFoV) 图像逐步合成 360 度图像，结合 NFoV 和文本指导。| |
-|ControlAR: Controllable Image Generation with Autoregressive Models | [ICLR-2025](https://arxiv.org/pdf/2410.02705) | [ControlAR](https://arxiv.org/pdf/2410.02705) | 探索自回归模型中的控制到图像生成。引入轻量级控制编码器将空间输入 (边缘图、深度图) 转换为控制 token。采用条件解码方法生成图像 token。| |
-|EditAR: Unified Conditional Generation with Autoregressive Models | [2025](https://arxiv.org/pdf/2501.04699) |[EditAR](https://jitengmu.github.io/EditAR/) | 提出 EditAR，一个用于各种条件图像生成任务的统一条件自回归模型 (图像编辑、深度图到图像、边缘图到图像、分割图到图像)。|PIE-Bench, (也提到了基线模型 InstructPix2Pix, MagicBrush, 暗示使用了这些模型所用的数据集如 COCO, ImageNet, LAION 等)|
-|Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation|[2025](https://arxiv.org/pdf/2504.02612)|[link](https://github.com/jiwoogit/ARBooth) | 专注于调整视觉自回归 (VAR) 模型用于主体驱动的图像生成，即根据少量示例和文本提示生成特定主体的图像。| |
-|MultiDiff: Consistent Novel View Synthesis from a Single Image | [CVPR-2024](https://arxiv.org/pdf/2406.18524) | [MultiDiff](https://sirwyver.github.io/MultiDiff/) |引入 MultiDiff，通过结合单目深度预测器和视频扩散先验，从单张 RGB 图像合成一致的新视角。|RealEstate10K, ScanNet|
-|VIewDiff: 3D-Consistent Image Generation with Text-to-Image Models | [CVPR-2024](https://arxiv.org/pdf/2403.01807) | [ViewDiff](https://lukashoel.github.io/ViewDiff/) | 提出 ViewDiff，一种使用预训练 text-to-image 扩散模型进行 3D 一致图像生成的方法。将 3D 体积渲染和跨帧注意力层集成到 U-Net 中。设计自回归生成方案。| ScanNet, RealEstate10K, (也提到了使用预训练 text-to-image 扩散模型作为先验，暗示使用了训练这些模型的数据集如 LAION, COCO 等)|
 
 ##  Autoregressive model efficiency and component improvements
 > These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
@@ -56,18 +42,25 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |VARGPT-v1.1: Improve Visual Autoregressive Large Unified Model via Iterative Instruction Tuning and Reinforcement Learning | [2025](https://arxiv.org/pdf/2504.02949) | [VARGPT-v1.1](https://github.com/VARGPT-family/VARGPT-v1.1) |提出 VARGPT-v1.1，一个改进的统一视觉自回归模型。保留 next-token prediction for visual understanding 和 next-scale generation for image synthesis 的双重范式。整合迭代视觉指令微调和强化学习 (DPO)。| |
 |TIGeR: Unifying Text-to-Image Generation and Retrieval with Large Multimodal Models | [ICLR-2025](https://arxiv.org/pdf/2406.05814) | [TIGeR](https://tiger-t2i.github.io/) | 提出 TIGeR，一个使用单一大型多模态模型 (LMM) 统一 text-to-image 生成和检索的框架。探索 LMM 的判别能力实现无需训练的生成式检索，并提出自主决策机制选择生成或检索。| TIGeR-Bench (knowledge domain)|
 
-## Application of autoregressive models in other fields
-> This type of paper applies autoregressive models to areas other than image generation, such as 3D shape generation, video generation, information hiding, etc.
+## Specific visual tasks based on autoregressive models
+> This type of paper applies autoregressive models to solve specific visual problems beyond image generation, such as image editing, conditional generation, style transfer, etc.
 
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
+|A Training-Free Style-aligned Image Generation with Scale-wise Autoregressive Model | [2025](https://arxiv.org/pdf/2504.06144) | |提出一种无需训练的风格对齐图像生成方法，利用 scale-wise 自回归模型。包括初始特征替换、关键特征插值和动态风格注入。| |
+|Anchor Token Matching: Implicit Structure Locking for Training-free AR Image Editing| [2025](https://arxiv.org/pdf/2504.10434) | [ATM](https://github.com/hutaiHang/ATM) | 提出隐式结构锁定 (ISLock)，一种无需训练的自回归 (AR) 图像编辑方法。使用“锚点 token 匹配”来隐式锁定结构，在注意力图过程中确保对齐。| PIE-Bench, (也集成了 LlamaGen 和 Lumina-mGPT，暗示使用了这些模型所用的数据集如 LAION, COCO 等)|
+|Autoregressive Omni-Aware Outpainting for Open-Vocabulary 360-Degree Image Generation| [AAAI-2024](https://arxiv.org/pdf/2309.03467) | [AOG-NET-360](https://github.com/zhuqiangLu/AOG-NET-360) | 提出自回归全景感知外绘 (AOGNet) 模型，用于从窄视场 (NFoV) 图像逐步合成 360 度图像，结合 NFoV 和文本指导。| |
+|ControlAR: Controllable Image Generation with Autoregressive Models | [ICLR-2025](https://arxiv.org/pdf/2410.02705) | [ControlAR](https://arxiv.org/pdf/2410.02705) | 探索自回归模型中的控制到图像生成。引入轻量级控制编码器将空间输入 (边缘图、深度图) 转换为控制 token。采用条件解码方法生成图像 token。| |
+|EditAR: Unified Conditional Generation with Autoregressive Models | [2025](https://arxiv.org/pdf/2501.04699) |[EditAR](https://jitengmu.github.io/EditAR/) | 提出 EditAR，一个用于各种条件图像生成任务的统一条件自回归模型 (图像编辑、深度图到图像、边缘图到图像、分割图到图像)。|PIE-Bench, (也提到了基线模型 InstructPix2Pix, MagicBrush, 暗示使用了这些模型所用的数据集如 COCO, ImageNet, LAION 等)|
+|Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation|[2025](https://arxiv.org/pdf/2504.02612)|[link](https://github.com/jiwoogit/ARBooth) | 专注于调整视觉自回归 (VAR) 模型用于主体驱动的图像生成，即根据少量示例和文本提示生成特定主体的图像。| |
+|MultiDiff: Consistent Novel View Synthesis from a Single Image | [CVPR-2024](https://arxiv.org/pdf/2406.18524) | [MultiDiff](https://sirwyver.github.io/MultiDiff/) |引入 MultiDiff，通过结合单目深度预测器和视频扩散先验，从单张 RGB 图像合成一致的新视角。|RealEstate10K, ScanNet|
+|VIewDiff: 3D-Consistent Image Generation with Text-to-Image Models | [CVPR-2024](https://arxiv.org/pdf/2403.01807) | [ViewDiff](https://lukashoel.github.io/ViewDiff/) | 提出 ViewDiff，一种使用预训练 text-to-image 扩散模型进行 3D 一致图像生成的方法。将 3D 体积渲染和跨帧注意力层集成到 U-Net 中。设计自回归生成方案。| ScanNet, RealEstate10K, (也提到了使用预训练 text-to-image 扩散模型作为先验，暗示使用了训练这些模型的数据集如 LAION, COCO 等)|
 |Autoregressive Video Generation without Vector Quantization| [ICLR-2025](https://arxiv.org/pdf/2412.14169) | [NOVA](https://github.com/baaivision/NOVA) | 提出 NOVA，一种用于高效灵活的无矢量量化自回归视频生成方法。将视频生成重新定义为时间上的逐帧和空间上的逐集合预测的无量化自回归建模。| |
 |Make Autoregressive Great Again: Diffusion-Free Graph Generation with Next-Scale Prediction| [2025](https://arxiv.org/pdf/2503.23612) | |提出 MAG，一个基于 next-scale prediction 的无扩散图生成框架，灵感来自视觉自回归方法。利用潜在表示的层次结构逐步生成整个图的尺度，无需显式节点排序。| generic graph datasets, molecular graph datasets (摘要未明确提及具体数据集名称)|
 |OctGPT: Octree-based Multiscale Autoregressive Models for 3D Shape Generation | [2025](https://arxiv.org/pdf/2504.09975) | [OctGPT](https://github.com/octree-nn/octgpt) |提出 OctGPT，一个用于 3D 形状生成的新型多尺度自回归模型。采用序列化八叉树表示捕获 3D 形状的层次和空间结构。使用八叉树编码粗略几何，使用 VQ-VAE 生成的二元 token 表示精细细节。 | Objaverse, (也提到了无条件、类别条件、文本条件和图像条件生成，以及大规模场景合成，暗示使用了多种 3D 形状数据集)|
 |Provably Secure Robust Image Steganography via Cross-Modal Error Correction| [AAAI-2025](https://arxiv.org/pdf/2412.12206) | | 提出一种基于状态最优自回归图像生成模型的高质量、可证明安全且鲁棒的图像隐写术。利用 VQ tokenizers 生成 stego 图像。采用跨模态纠错框架生成 stego 文本以辅助恢复和提取信息。| |
 |Scenario Dreamer: Vectorized Latent Diffusion for Generating Driving Simulation Environments| [CVPR-2025](https://arxiv.org/pdf/2503.22496) | [Scenario Dreamer](https://princeton-computational-imaging.github.io/scenario-dreamer/) | 引入 Scenario Dreamer，一个数据驱动的自动驾驶规划生成模拟器，生成初始交通场景和逼真智能体行为。使用矢量化潜在扩散模型生成初始场景，自回归 Transformer 模拟智能体行为。支持通过扩散 inpainting 进行场景外推。| |
 |Topic-VQ-VAE: Leveraging Latent Codebooks for Flexible Topic-Guided Document Generation | [AAAI-2024](https://arxiv.org/pdf/2312.11532) | [Topic-VQ-VAE](https://github.com/clovaai/TVQ-VAE) | 提出 Topic-VQ-VAE (TVQ-VAE)，一个利用 VQ-VAE 潜在 codebooks 的生成式主题模型，用于灵活的主题引导文档生成。将潜在 codebooks 和嵌入解释为概念上的词袋。| |
-
 |Diffusion Beats Autoregressive: An Evaluation of Compositional Generation in Text-to-Image Models| [NeurIPS-2024](https://arxiv.org/pdf/2410.22775) | | 评估和比较扩散模型 (FLUX, Stable Diffusion) 和自回归 (AR) 模型 (LlamaGen) 在 text-to-image 合成中的组合生成能力，专注于准确渲染复杂的组合。| |
 
 ## Others
