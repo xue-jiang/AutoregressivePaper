@@ -35,12 +35,12 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-|Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens| [CVPR-2025](https://arxiv.org/pdf/2504.14666) | [DDT-LLAMA](https://ddt-llama.github.io/) | 通过利用扩散时间步学习离散的、递归的视觉 token 来统一视觉理解和生成。提出的 token 递归地补偿噪声图像中属性的逐步损失。引入 DDT-LLaMA 模型。| ImageNet (用于 tokenizer 训练), Laion, InternVID (用于基线 tokenizer 训练)|
+|Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens| [CVPR-2025](https://arxiv.org/pdf/2504.14666) | [DDT-LLAMA](https://ddt-llama.github.io/) | 通过利用扩散时间步学习离散的、递归的视觉 token 来统一视觉理解和生成。提出的 token 递归地补偿噪声图像中属性的逐步损失。引入 DDT-LLaMA 模型。| ImageNet|
 |JanusFlow: Harmonizing Autoregression and Rectified Flow for Unified Multimodal Understanding and Generation| [CVPR-2025](https://arxiv.org/pdf/2411.07975) | [Janus](https://github.com/deepseek-ai/Janus) | 提出 JanusFlow 框架，将图像理解和生成统一在一个模型中。将自回归语言模型与 rectified flow 集成。解耦理解和生成编码器并在统一训练期间对齐它们的表示。| |
 |UGen: Unified Autoregressive Multimodal Model with Progressive Vocabulary Learning| [2025](https://arxiv.org/pdf/2503.21193) | | 提出 UGen，一个统一的自回归多模态模型，用于同时进行文本处理、图像理解和图像生成。将文本和图像转换为离散 token 序列，使用单个 transformer 自回归生成。采用渐进式词汇学习机制。| |
 |Unified Autoregressive Visual Generation and Understanding with Continuous Tokens | [2025](https://arxiv.org/pdf/2503.13436) | | 提出 UniFluid，一个使用连续视觉 token 进行联合视觉生成和理解的统一自回归框架。处理多模态图像和文本输入，生成离散文本 token 和连续图像 token。| |
 |VARGPT-v1.1: Improve Visual Autoregressive Large Unified Model via Iterative Instruction Tuning and Reinforcement Learning | [2025](https://arxiv.org/pdf/2504.02949) | [VARGPT-v1.1](https://github.com/VARGPT-family/VARGPT-v1.1) |提出 VARGPT-v1.1，一个改进的统一视觉自回归模型。保留 next-token prediction for visual understanding 和 next-scale generation for image synthesis 的双重范式。整合迭代视觉指令微调和强化学习 (DPO)。| |
-|TIGeR: Unifying Text-to-Image Generation and Retrieval with Large Multimodal Models | [ICLR-2025](https://arxiv.org/pdf/2406.05814) | [TIGeR](https://tiger-t2i.github.io/) | 提出 TIGeR，一个使用单一大型多模态模型 (LMM) 统一 text-to-image 生成和检索的框架。探索 LMM 的判别能力实现无需训练的生成式检索，并提出自主决策机制选择生成或检索。| TIGeR-Bench (knowledge domain)|
+|TIGeR: Unifying Text-to-Image Generation and Retrieval with Large Multimodal Models | [ICLR-2025](https://arxiv.org/pdf/2406.05814) | [TIGeR](https://tiger-t2i.github.io/) | 提出 TIGeR，一个使用单一大型多模态模型 (LMM) 统一 text-to-image 生成和检索的框架。探索 LMM 的判别能力实现无需训练的生成式检索，并提出自主决策机制选择生成或检索。| TIGeR-Bench |
 
 ## Specific visual tasks based on autoregressive models
 > This type of paper applies autoregressive models to solve specific visual problems beyond image generation, such as image editing, conditional generation, style transfer, etc.
@@ -67,7 +67,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation | [2025](https://arxiv.org/pdf/2504.08736) | [GigaTok](https://silentview.github.io/GigaTok/) | 专注于缩放视觉 tokenizer，解决缩放 tokenizer 提高重建质量但可能降低下游生成质量的问题。提出 GigaTok，通过语义正则化对齐 tokenizer 特征和语义一致特征。探索缩放 tokenizer 的实践。| |
-|Autoregressive Distillation of Diffusion Transformers | [CVPR-2025](https://arxiv.org/pdf/2504.11295) | [ARD](https://github.com/alsdudrla10/ARD) |引入 Autoregressive Distillation (ARD)，一种将 Diffusion Transformer 模型蒸馏成少步骤学生模型的新方法。利用 Probability Flow ODE 的历史轨迹预测未来步骤，减轻曝光偏差。 | ImageNet 256p, (也提到了从 Emu 模型蒸馏，Emu 可能在大规模数据集上训练)|
+|Autoregressive Distillation of Diffusion Transformers | [CVPR-2025](https://arxiv.org/pdf/2504.11295) | [ARD](https://github.com/alsdudrla10/ARD) |引入 Autoregressive Distillation (ARD)，一种将 Diffusion Transformer 模型蒸馏成少步骤学生模型的新方法。利用 Probability Flow ODE 的历史轨迹预测未来步骤，减轻曝光偏差。 | ImageNet 256p|
 |Safe-VAR: Safe Visual Autoregressive Model for Text-to-Image Generative Watermarking | [2025](https://arxiv.org/pdf/2503.11324) | | 提出 Safe-VAR，第一个专为视觉自回归 (VAR) text-to-image 生成模型设计的数字水印框架。研究水印注入时机的影响，提出 Adaptive Scale Interaction Module 动态确定水印嵌入策略。| |
 
 
