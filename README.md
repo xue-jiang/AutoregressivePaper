@@ -1,8 +1,10 @@
 # Paper List --> Autoregressive Image Generation
 ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 
-[table-1](#Autoregressive Image Generation Method)
+[点击此处跳转到 Autoregressive Image Generation Method](#autoregressive-method-section)
 
+
+<a name="autoregressive-method-section"></a>
 ## Autoregressive Image Generation Method
 > This type of paper focuses on improving the basic methods, architectures, and training strategies of autoregressive models for image generation.
 
