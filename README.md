@@ -1,5 +1,5 @@
 # Paper List --> Autoregressive Image Generation
-ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
+ICCV, CVPR, ECCV，AAAI, NIPS, ICLR  
 Summary of recent papers on Autoregressive Image Generation, continuously updated ......
 
 - [Autoregressive Image Generation Method](#1)
