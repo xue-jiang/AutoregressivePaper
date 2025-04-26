@@ -1,11 +1,11 @@
 # Paper List --> Autoregressive Image Generation
 ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 
-[Autoregressive Image Generation Method](#1)
-[Autoregressive model efficiency and component improvements](#2)
-[Unified and Multimodal Autoregressive Models](#3)
-[Specific visual tasks based on autoregressive models](#4)
-[Others](#5)
+- [Autoregressive Image Generation Method](#1)
+- [Autoregressive model efficiency and component improvements](#2)
+- [Unified and Multimodal Autoregressive Models](#3)
+- [Specific visual tasks based on autoregressive models](#4)
+- [Others](#5)
 
 <a name="1"></a>
 ## Autoregressive Image Generation Method
