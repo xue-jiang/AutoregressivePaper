@@ -1,10 +1,13 @@
 # Paper List --> Autoregressive Image Generation
 ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 
-[点击此处跳转到 Autoregressive Image Generation Method](#autoregressive-method-section)
+[Autoregressive Image Generation Method](#1)
+[Autoregressive model efficiency and component improvements](#2)
+[Unified and Multimodal Autoregressive Models](#3)
+[Specific visual tasks based on autoregressive models](#4)
+[Others](#5)
 
-
-<a name="autoregressive-method-section"></a>
+<a name="1"></a>
 ## Autoregressive Image Generation Method
 > This type of paper focuses on improving the basic methods, architectures, and training strategies of autoregressive models for image generation.
 
@@ -14,6 +17,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction| [NeurIPS-2024](https://arxiv.org/pdf/2404.02905) | [VAR](https://github.com/FoundationVision/VAR) | 提出 Visual Autoregressive modeling (VAR)，将图像上的自回归学习重新定义为 coarse-to-fine 的“下一尺度预测”。 | ImageNet|
 |FAR: Frequency Autoregressive Image Generation with Continuous Tokens | [2025](https://arxiv.org/pdf/2503.05305) | [FAR](https://yuhuustc.github.io//projects/FAR.html) | 提出 Frequency Autoregressive (FAR) 范式，使用连续 token 进行图像生成。定义频谱依赖作为回归方向，高频分量基于低频分量构建图像。探索 FAR 与连续 tokenizer 的集成。| |
 
+<a name="2"></a>
 ##  Autoregressive model efficiency and component improvements
 > These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
 
@@ -34,6 +38,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Direction-Aware Diagonal Autoregressive Image Generation| [2025](https://arxiv.org/pdf/2503.11129) | [DAR](https://arxiv.org/pdf/2503.11129) | 提出使用对角扫描顺序生成图像 token，确保相邻 token 在空间上接近。引入方向感知模块 (4D-ROPE 和方向嵌入) 处理生成方向变化。使用图像 tokenizer 的 codebook 作为 token 嵌入。| ImageNet| 对角扫描|
 |Customize Your Visual Autoregressive Recipe with Set Autoregressive Modeling | [2024](https://arxiv.org/pdf/2410.10511) | [SAR](https://github.com/poppuppy/SAR) | 提出集合自回归建模 (SAR)，将 AR 从固定栅格顺序的下一 token 预测推广到“下一集合”预测，允许更灵活的生成。| | 集合预测|
 
+<a name="3"></a>
 ## Unified and Multimodal Autoregressive Models
 > These papers explore applying autoregressive models to unified vision and language tasks, or to handle multimodal data.
 
@@ -46,6 +51,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |VARGPT-v1.1: Improve Visual Autoregressive Large Unified Model via Iterative Instruction Tuning and Reinforcement Learning | [2025](https://arxiv.org/pdf/2504.02949) | [VARGPT-v1.1](https://github.com/VARGPT-family/VARGPT-v1.1) |提出 VARGPT-v1.1，一个改进的统一视觉自回归模型。保留 next-token prediction for visual understanding 和 next-scale generation for image synthesis 的双重范式。整合迭代视觉指令微调和强化学习 (DPO)。| |
 |TIGeR: Unifying Text-to-Image Generation and Retrieval with Large Multimodal Models | [ICLR-2025](https://arxiv.org/pdf/2406.05814) | [TIGeR](https://tiger-t2i.github.io/) | 提出 TIGeR，一个使用单一大型多模态模型 (LMM) 统一 text-to-image 生成和检索的框架。探索 LMM 的判别能力实现无需训练的生成式检索，并提出自主决策机制选择生成或检索。| TIGeR-Bench |
 
+<a name="4"></a>
 ## Specific visual tasks based on autoregressive models
 > This type of paper applies autoregressive models to solve specific visual problems beyond image generation, such as image editing, conditional generation, style transfer, etc.
 
@@ -67,6 +73,7 @@ ICCV, CVPR, ECCV，AAAI, NIPS, ICLR
 |Topic-VQ-VAE: Leveraging Latent Codebooks for Flexible Topic-Guided Document Generation | [AAAI-2024](https://arxiv.org/pdf/2312.11532) | [Topic-VQ-VAE](https://github.com/clovaai/TVQ-VAE) | 提出 Topic-VQ-VAE (TVQ-VAE)，一个利用 VQ-VAE 潜在 codebooks 的生成式主题模型，用于灵活的主题引导文档生成。将潜在 codebooks 和嵌入解释为概念上的词袋。| | |
 |Diffusion Beats Autoregressive: An Evaluation of Compositional Generation in Text-to-Image Models| [NeurIPS-2024](https://arxiv.org/pdf/2410.22775) | | 评估和比较扩散模型 (FLUX, Stable Diffusion) 和自回归 (AR) 模型 (LlamaGen) 在 text-to-image 合成中的组合生成能力，专注于准确渲染复杂的组合。| |analysis|
 
+<a name="5"></a>
 ## Others
 | title | paper | link | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
