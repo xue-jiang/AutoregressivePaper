@@ -12,7 +12,7 @@ Summary of recent papers on Autoregressive Image Generation, continuously update
 ## Autoregressive Image Generation Method
 > This type of paper focuses on improving the basic methods, architectures, and training strategies of autoregressive models for image generation.
 
-| title | paper | coede | tips | dataset |
+| title | paper | code | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Autoregressive Image Generation without Vector Quantization|[NeurIPS-2024](https://arxiv.org/pdf/2406.11838) | [MAR](https://github.com/LTH14/mar) |提出使用扩散过程在连续值空间中建模每个 token 的概率分布，定义 Diffusion Loss 函数，消除对离散 tokenizer 的需求。| ImageNet |
 |Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction| [NeurIPS-2024](https://arxiv.org/pdf/2404.02905) | [VAR](https://github.com/FoundationVision/VAR) | 提出 Visual Autoregressive modeling (VAR)，将图像上的自回归学习重新定义为 coarse-to-fine 的“下一尺度预测”。 | ImageNet|
