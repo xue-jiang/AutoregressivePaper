@@ -72,7 +72,7 @@ Summary of recent papers on Autoregressive Image Generation, continuously update
 |Provably Secure Robust Image Steganography via Cross-Modal Error Correction| [AAAI-2025](https://arxiv.org/pdf/2412.12206) | | 提出一种基于状态最优自回归图像生成模型的高质量、可证明安全且鲁棒的图像隐写术。利用 VQ tokenizers 生成 stego 图像。采用跨模态纠错框架生成 stego 文本以辅助恢复和提取信息。| |图像隐写|
 |Scenario Dreamer: Vectorized Latent Diffusion for Generating Driving Simulation Environments| [CVPR-2025](https://arxiv.org/pdf/2503.22496) | [Scenario Dreamer](https://princeton-computational-imaging.github.io/scenario-dreamer/) | 引入 Scenario Dreamer，一个数据驱动的自动驾驶规划生成模拟器，生成初始交通场景和逼真智能体行为。使用矢量化潜在扩散模型生成初始场景，自回归 Transformer 模拟智能体行为。支持通过扩散 inpainting 进行场景外推。| | 驾驶场景|
 |Topic-VQ-VAE: Leveraging Latent Codebooks for Flexible Topic-Guided Document Generation | [AAAI-2024](https://arxiv.org/pdf/2312.11532) | [Topic-VQ-VAE](https://github.com/clovaai/TVQ-VAE) | 提出 Topic-VQ-VAE (TVQ-VAE)，一个利用 VQ-VAE 潜在 codebooks 的生成式主题模型，用于灵活的主题引导文档生成。将潜在 codebooks 和嵌入解释为概念上的词袋。| | |
-|Diffusion Beats Autoregressive: An Evaluation of Compositional Generation in Text-to-Image Models| [NeurIPS-2024](https://arxiv.org/pdf/2410.22775) | | 评估和比较扩散模型 (FLUX, Stable Diffusion) 和自回归 (AR) 模型 (LlamaGen) 在 text-to-image 合成中的组合生成能力，专注于准确渲染复杂的组合。| |analysis|
+|Diffusion Beats Autoregressive: An Evaluation of Compositional Generation in Text-to-Image Models| [NeurIPS-2024](https://arxiv.org/pdf/2410.22775) | | 评估和比较扩散模型 (FLUX, Stable Diffusion) 和自回归 (AR) 模型 (LlamaGen) 在 text-to-image 合成中的组合生成能力，专注于准确渲染复杂的组合。| T2I-CompBench |分析|
 
 <a name="5"></a>
 ## Others
