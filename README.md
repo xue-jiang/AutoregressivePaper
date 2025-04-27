@@ -12,7 +12,7 @@ Summary of recent papers on Autoregressive Image Generation, continuously update
 ## Autoregressive Image Generation Method
 > This type of paper focuses on improving the basic methods, architectures, and training strategies of autoregressive models for image generation.
 
-| title | paper | link | tips | dataset |
+| title | paper | coede | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Autoregressive Image Generation without Vector Quantization|[NeurIPS-2024](https://arxiv.org/pdf/2406.11838) | [MAR](https://github.com/LTH14/mar) |提出使用扩散过程在连续值空间中建模每个 token 的概率分布，定义 Diffusion Loss 函数，消除对离散 tokenizer 的需求。| ImageNet |
 |Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction| [NeurIPS-2024](https://arxiv.org/pdf/2404.02905) | [VAR](https://github.com/FoundationVision/VAR) | 提出 Visual Autoregressive modeling (VAR)，将图像上的自回归学习重新定义为 coarse-to-fine 的“下一尺度预测”。 | ImageNet|
@@ -22,7 +22,7 @@ Summary of recent papers on Autoregressive Image Generation, continuously update
 ##  Autoregressive model efficiency and component improvements
 > These papers focus on increasing the speed of generating autoregressive models, reducing computing resource consumption, or improving key components such as tokenizers and latent spaces.
 
-| title | paper | link | tips | dataset | key points |
+| title | paper | code | tips | dataset | key points |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 |SimpleAR: Pushing the Frontier of Autoregressive Visual Generation through Pretraining, SFT, and RL | [2025](https://arxiv.org/pdf/2504.11455) | [SimpleAR](https://github.com/wdrink/SimpleAR)| 提出 SimpleAR，一个没有复杂架构修改的普通自回归视觉生成框架。通过优化训练和推理流程，结合预训练、监督微调 (SFT) 和强化学习 (RL) 提升性能。|text-to-image benchmarks (e.g., GenEval, DPG), COCO, ImageNet| SFT & RL |
 |SWITTI: Designing Scale-Wise Transformers for Text-to-Image Synthesis|[CVPR-2025](https://arxiv.org/pdf/2412.01819)| [SWITTI](https://arxiv.org/pdf/2412.01819) | 提出 SWITTI，一个用于 text-to-image 生成的 scale-wise transformer。调整现有的 next-scale prediction AR 架构，解决训练稳定性并提高采样效率。|使用 LLaVA-v1.4-13B, LLaVA-v1.6-34B 和 ShareGPT4V 模型进行了重新配文，并根据 OpenCLIP ViT-G/14 选择了最佳标题| |
@@ -43,7 +43,7 @@ Summary of recent papers on Autoregressive Image Generation, continuously update
 ## Unified and Multimodal Autoregressive Models
 > These papers explore applying autoregressive models to unified vision and language tasks, or to handle multimodal data.
 
-| title | paper | link | tips | dataset |
+| title | paper | code | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens| [CVPR-2025](https://arxiv.org/pdf/2504.14666) | [DDT-LLAMA](https://ddt-llama.github.io/) | 通过利用扩散时间步学习离散的、递归的视觉 token 来统一视觉理解和生成。提出的 token 递归地补偿噪声图像中属性的逐步损失。引入 DDT-LLaMA 模型。| ImageNet|
 |JanusFlow: Harmonizing Autoregression and Rectified Flow for Unified Multimodal Understanding and Generation| [CVPR-2025](https://arxiv.org/pdf/2411.07975) | [Janus](https://github.com/deepseek-ai/Janus) | 提出 JanusFlow 框架，将图像理解和生成统一在一个模型中。将自回归语言模型与 rectified flow 集成。解耦理解和生成编码器并在统一训练期间对齐它们的表示。| |
@@ -56,7 +56,7 @@ Summary of recent papers on Autoregressive Image Generation, continuously update
 ## Specific visual tasks based on autoregressive models
 > This type of paper applies autoregressive models to solve specific visual problems beyond image generation, such as image editing, conditional generation, style transfer, etc.
 
-| title | paper | link | tips | dataset | key points |
+| title | paper | code | tips | dataset | key points |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 |A Training-Free Style-aligned Image Generation with Scale-wise Autoregressive Model | [2025](https://arxiv.org/pdf/2504.06144) | |提出一种无需训练的风格对齐图像生成方法，利用 scale-wise 自回归模型。包括初始特征替换、关键特征插值和动态风格注入。| |风格对齐|
 |Anchor Token Matching: Implicit Structure Locking for Training-free AR Image Editing| [2025](https://arxiv.org/pdf/2504.10434) | [ATM](https://github.com/hutaiHang/ATM) | 提出隐式结构锁定 (ISLock)，一种无需训练的自回归 (AR) 图像编辑方法。使用“锚点 token 匹配”来隐式锁定结构，在注意力图过程中确保对齐。| PIE-Bench|图像编辑|
@@ -76,7 +76,7 @@ Summary of recent papers on Autoregressive Image Generation, continuously update
 
 <a name="5"></a>
 ## Others
-| title | paper | link | tips | dataset |
+| title | paper | code | tips | dataset |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation | [2025](https://arxiv.org/pdf/2504.08736) | [GigaTok](https://silentview.github.io/GigaTok/) | 专注于缩放视觉 tokenizer，解决缩放 tokenizer 提高重建质量但可能降低下游生成质量的问题。提出 GigaTok，通过语义正则化对齐 tokenizer 特征和语义一致特征。探索缩放 tokenizer 的实践。| |
 |Autoregressive Distillation of Diffusion Transformers | [CVPR-2025](https://arxiv.org/pdf/2504.11295) | [ARD](https://github.com/alsdudrla10/ARD) |引入 Autoregressive Distillation (ARD)，一种将 Diffusion Transformer 模型蒸馏成少步骤学生模型的新方法。利用 Probability Flow ODE 的历史轨迹预测未来步骤，减轻曝光偏差。 | ImageNet 256p|
