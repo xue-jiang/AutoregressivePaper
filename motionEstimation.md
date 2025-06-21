@@ -54,7 +54,6 @@
 #### Estimation by Prediction
 
 ##### Physics-Based Methods
-16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 |[An Introduction to the Kalman Filter](https://d1wqtxts1xzle7.cloudfront.net/52484748/Kalman_CoursePack_08-libre.pdf?1491379511=&response-content-disposition=inline%3B+filename%3DAn_Introduction_to_the_Kalman_Filter.pdf&Expires=1750353534&Signature=eCqfwl8yOdlKkJ249wukP8OUaorUeNjMB-SKiEAeqbIMT6EnQRQbx6UZ6jKUCQ5SdCV1CFghv6fNWXHGvduytueZ71b8EPx87Iwdi6CjCh8PZJPCSM47eDjYkJcR81FVMqQaDl9fjs50y1LlEN2HT6DwH4pc2ykGe3VdRdBNO7Cxs9mujCMeLu76RrWn53by5MYMI269-mG~k5br6rdhNxI23xFmVt16SceuaOkF3JN8TW3RXpwm7jESpLYovlDq3qTGejKEZ3zVlV5kOXw~wc8ZC9S7xy2bZJ9uF2WAWY0cQVMBal1XIPTqRdO8vpgPEtWOCg011L6mP4IZtC5dEA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA) <br/> Greg Welch1 and Gary Bishop2 | ![image](images/16.png) | [Paper](https://d1wqtxts1xzle7.cloudfront.net/52484748/Kalman_CoursePack_08-libre.pdf?1491379511=&response-content-disposition=inline%3B+filename%3DAn_Introduction_to_the_Kalman_Filter.pdf&Expires=1750353534&Signature=eCqfwl8yOdlKkJ249wukP8OUaorUeNjMB-SKiEAeqbIMT6EnQRQbx6UZ6jKUCQ5SdCV1CFghv6fNWXHGvduytueZ71b8EPx87Iwdi6CjCh8PZJPCSM47eDjYkJcR81FVMqQaDl9fjs50y1LlEN2HT6DwH4pc2ykGe3VdRdBNO7Cxs9mujCMeLu76RrWn53by5MYMI269-mG~k5br6rdhNxI23xFmVt16SceuaOkF3JN8TW3RXpwm7jESpLYovlDq3qTGejKEZ3zVlV5kOXw~wc8ZC9S7xy2bZJ9uF2WAWY0cQVMBal1XIPTqRdO8vpgPEtWOCg011L6mP4IZtC5dEA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA) |
@@ -79,7 +78,6 @@
 
 
 ##### Sequential Modeling Networks
-35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [Recurrent Filter Learning for Visual Tracking](https://ieeexplore.ieee.org/document/8265445) <br/> Tianyu Yang; Antoni B. Chan | ![image](images/35.png) | [Paper](https://ieeexplore.ieee.org/document/8265445) |
@@ -99,7 +97,6 @@
 | [DSTrack: Diffusion-based sequence learning for visual object tracking](https://www.sciencedirect.com/science/article/abs/pii/S0031320325003541#:~:text=In%20this%20paper%2C%20we%20propose%20a%20novel%20approach,from%20limited%20discrete%20variables%20to%20unlimited%20continuous%20probabilities.) <br/> Zhixing Wang, Kai Wang, Chuanming Tang, Xiang Li, Jianlin Zhang, Lianli Gao | ![image](images/49.png) | [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0031320325003541#:~:text=In%20this%20paper%2C%20we%20propose%20a%20novel%20approach,from%20limited%20discrete%20variables%20to%20unlimited%20continuous%20probabilities.) |
 
 ##### Generative Models
-50 51 34 52 53 54 55 56 57 58 59 60 49 61 62 63
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114) <br/> Diederik P Kingma, Max Welling | ![image](images/50.png) | [Paper](https://arxiv.org/abs/1312.6114) |
@@ -122,7 +119,6 @@
 #### Estimation by Correlation
 
 ##### Explicit Computation
-64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [Visual object tracking using adaptive correlation filters](https://webvpn.whut.edu.cn/https/77726476706e69737468656265737421f9f244993f20645f6c0dc7a59d50267b1ab4a9/document/5539960) <br/> David S. Bolme; J. Ross Beveridge; Bruce A. Draper; Yui Man Lui | ![image](images/64.png) | [Paper](https://webvpn.whut.edu.cn/https/77726476706e69737468656265737421f9f244993f20645f6c0dc7a59d50267b1ab4a9/document/5539960) |
@@ -142,7 +138,6 @@
 | [An iterative image registration technique with an application to stereo vision](https://dl.acm.org/doi/10.5555/1623264.1623280) <br/> Bruce D. Lucas, Takeo Kanade | ![image](images/78.png) | [Paper](https://dl.acm.org/doi/10.5555/1623264.1623280) |
 
 ##### Two-Stream Architecture
-79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [Fully-Convolutional Siamese Networks for Object Tracking](https://arxiv.org/abs/1606.09549) <br/> Luca Bertinetto, Jack Valmadre, João F. Henriques, Andrea Vedaldi, Philip H. S. Torr | ![image](images/79.png) | [Paper](https://arxiv.org/abs/1606.09549) |
@@ -165,7 +160,6 @@
 | [LiteFlowNet: A Lightweight Convolutional Neural Network for Optical Flow Estimation](https://arxiv.org/abs/1805.07036) <br/> Tak-Wai Hui, Xiaoou Tang, Chen Change Loy | ![image](images/96.png) | [GitHub](https://github.com/twhui/LiteFlowNet) <br/> [Paper](https://arxiv.org/abs/1805.07036) |
 
 ##### Attention Mechanism
-97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 44 93 49 45 116 117 
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [Transformer Tracking](https://arxiv.org/abs/2103.15436) <br/> Xin Chen, Bin Yan, Jiawen Zhu, Dong Wang, Xiaoyun Yang, Huchuan Lu | ![image](images/97.png) | [GitHub](https://github.com/chenxin-dlut/TransT) <br/> [Paper](https://arxiv.org/abs/2103.15436) |
@@ -195,7 +189,6 @@
 | [VideoFlow: Exploiting Temporal Cues for Multi-frame Optical Flow Estimation](https://arxiv.org/abs/2303.08340) <br/> Xiaoyu Shi, Zhaoyang Huang, Weikang Bian, Dasong Li, Manyuan Zhang, Ka Chun Cheung, Simon See, Hongwei Qin, Jifeng Dai, Hongsheng Li | ![image](images/117.png) | [GitHub](https://github.com/XiaoyuShi97/VideoFlow) <br/> [Paper](https://arxiv.org/abs/2303.08340) |
 
 ##### Implicit Learning
-118 119 120 121 122 123 124 125 126 127 128
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [Learning Multi-Domain Convolutional Neural Networks for Visual Tracking](https://arxiv.org/abs/1510.07945) <br/> Hyeonseob Nam, Bohyung Han | ![image](images/118.png) | [Paper](https://arxiv.org/abs/1510.07945) |
@@ -213,7 +206,6 @@
 #### Practical Strategies
 
 ##### Iterative Refinement
-129 121 122 123 130 102 95 96 41
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [Siamese Cascaded Region Proposal Networks for Real-Time Visual Tracking](https://arxiv.org/abs/1812.06148) <br/> Heng Fan, Haibin Ling | ![image](images/129.png) | [Paper](https://arxiv.org/abs/1812.06148) |
@@ -227,7 +219,6 @@
 | [RAFT: Recurrent All-Pairs Field Transforms for Optical Flow](https://arxiv.org/abs/2003.12039) <br/> Zachary Teed, Jia Deng | ![image](images/41.png) | [GitHub](https://github.com/princeton-vl/RAFT) <br/> [Paper](https://arxiv.org/abs/2003.12039) |
 
 ##### Memory Augmentation
-131 132 37 133 98 112 106 105 134 135 136 129 121 122 123 130 102 95 96 41
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [High-Performance Long-Term Tracking with Meta-Updater](https://arxiv.org/abs/2004.00305) <br/> Kenan Dai, Yunhua Zhang, Dong Wang, Jianhua Li, Huchuan Lu, Xiaoyun Yang | ![image](images/131.png) | [GitHub](https://github.com/Daikenan/LTMU) <br/> [Paper](https://arxiv.org/abs/2004.00305) |
@@ -252,7 +243,6 @@
 | [RAFT: Recurrent All-Pairs Field Transforms for Optical Flow](https://arxiv.org/abs/2003.12039) <br/> Zachary Teed, Jia Deng | ![image](images/41.png) | [GitHub](https://github.com/princeton-vl/RAFT) <br/> [Paper](https://arxiv.org/abs/2003.12039) |
 
 ##### Online Update
-64 65 118 137 121 122 123 138 139 140 141 98 99 112
 | Title & Authors | Introduction | Links |
 | ------------- | ------------- | ------------- |
 | [Visual object tracking using adaptive correlation filters](https://webvpn.whut.edu.cn/https/77726476706e69737468656265737421f9f244993f20645f6c0dc7a59d50267b1ab4a9/document/5539960) <br/> David S. Bolme; J. Ross Beveridge; Bruce A. Draper; Yui Man Lui | ![image](images/64.png) | [Paper](https://webvpn.whut.edu.cn/https/77726476706e69737468656265737421f9f244993f20645f6c0dc7a59d50267b1ab4a9/document/5539960) |
